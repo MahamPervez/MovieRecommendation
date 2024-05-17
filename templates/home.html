@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Welcome to the Movie Recommender</h1>
+  <p>Enter the Hollywood movie you like to get recommendations.</p>
+  <form action="/recommend" method="get">
+    <div class="form-group">
+      <label for="movie">Movie name:</label>
+      <input type="text" class="form-control" id="movie" name="movie" placeholder="Enter movie name">
+    </div>
+    <button type="submit" class="btn btn-primary">Get Recommendations</button>
+  </form>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Recommendations for {{ movie }}</h1>
+  {% if t == 's' %}
+    <p>{{ r }}</p>
+  {% else %}
+    <ul>
+      {% for movie in r %}
+        <li>{{ movie }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endblock %}
